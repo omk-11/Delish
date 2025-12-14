@@ -1,5 +1,4 @@
-// evening task: data vaidation zod , roles figuring
-// node changes
+// evening task: data validation zod , roles figuring
 
 const { User } = require("../models/user.model.js");
 const bcrypt = require("bcrypt");
