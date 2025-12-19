@@ -7,13 +7,13 @@ const PORT = process.env.PORT;
 const MONGOSTRING = process.env.MONGOSTRING;
 
 const app = express();
-
 app.use(express.json());
 
-app.get("/", () => {
-  console.log("hello server");
-});
+
+//all routes
 app.use("/api/auth", require("../src/routes/auth.routes.js"));
+app.use("/api/users",require('../src/routes/user.routes.js'))
+
 
 try {
   mongoose.connect(MONGOSTRING).then(() => {
