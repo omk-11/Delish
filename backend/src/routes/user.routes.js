@@ -1,17 +1,22 @@
 const Router = require("express").Router();
-const {authMiddleware} = require("../middlewares/auth.middleware.js")
+const { authMiddleware } = require("../middlewares/auth.middleware.js");
 
 Router.use(authMiddleware);
 
-Router.get('/me',()=>{});
-Router.patch('/me/password',()=>{});
-Router.patch('/me/name',()=>{});
+//get me and update me logic
+Router.get("/me", () => {});
+Router.patch("/me", () => {});
+Router.patch("/me/password", () => {});
+Router.post("/me/deactivate", () => {});
 
-Router.post('/cafe/:cafeId/save'); //cafe bookmark
-Router.delete('/cafe/:cafeId/save'); //delete cafe
-Router.get('/cafes/saved'); //get saved cafes
-Router.post('/cafe/:cafeId/comment',()=>{});  //---cafe reviews handlers 
-Router.post('/cafe/:cafeId/like',()=>{});     //----|
+//saved cafe logic
+Router.post("/cafe/:cafeId/save"); //cafe bookmark
+Router.delete("/cafe/:cafeId/save"); //remove bookmark cafe
+Router.get("/cafe/saved"); //get saved cafes
 
+//cafe review logic
+Router.post("/cafe/:cafeId/review", () => {}); //---cafe reviews handlers
+Router.post("/cafe/:cafeId/like", () => {}); //----|
+Router.post("/reviews/:reviewId/like", () => {}); //like review
 
 module.exports = Router;
