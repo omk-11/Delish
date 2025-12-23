@@ -1,5 +1,3 @@
-// evening task: data validation zod , roles figuring
-
 const { User } = require("../models/user.model.js");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
