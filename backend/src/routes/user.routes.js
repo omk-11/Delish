@@ -5,9 +5,9 @@ Router.use(authMiddleware);
 
 //get me and update me logic
 Router.get("/me", () => {});
-Router.patch("/me", () => {});
-Router.patch("/me/password", () => {});
-Router.post("/me/deactivate", () => {});
+Router.patch("/me/update", () => {});
+Router.patch("/me/update/password", () => {});
+Router.post("/me/update/deactivate", () => {});
 
 //saved cafe logic
 Router.post("/cafe/:cafeId/save"); //cafe bookmark
